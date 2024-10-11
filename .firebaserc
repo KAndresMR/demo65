@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "demo65ppwe": {
+      "hosting": {
+        "demo65": [
+          "demo65ppwe"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "demo65ppwe"
+  }
+}

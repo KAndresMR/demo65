@@ -1,0 +1,19 @@
+<!-- supermercado.component.html -->
+<h1>Bienvenido a SuperMercAI</h1>
+
+<!-- Lista de productos -->
+<h4>Seleccione el Id:</h4>
+<select (change)="mostrarDetalles($event)">
+  <option *ngFor="let elemento of elementos" [value]="elemento.id">{{ elemento.id }}</option>
+</select>
+
+<br>
+<button (click)="guardar()">Guardar!</button>
+
+<!-- Detalles del producto o usuario -->
+<div *ngIf="elementoSeleccionado">
+  <h2>Detalles</h2>
+  <p>Nombre: {{ elementoSeleccionado?.nombre }}</p>
+  <p>Precio: {{ elementoSeleccionado?.precio }}</p>
+  <!-- Agrega más detalles según la estructura de tu objeto de producto -->
+</div>

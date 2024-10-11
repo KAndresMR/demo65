@@ -176,6 +176,7 @@
     }
   }
 </style>
+<app-header [usuario]="user" ></app-header>
 
 <main class="main">
   <div class="content">
@@ -225,8 +226,30 @@
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
       </svg>
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+
+      <!-- ********************** Encabezado de la pagina web **********************-->
+      <header>
+        <div>
+
+        </div>
+      </header>
+
+<!-- ********************** Cuerpo de la pagina **********************-->
+      <div>
+        <h1>Hola, {{ title }}</h1>
+        <p>Congratulations! Your app is running. 🎉</p>
+        <div>
+          <router-outlet />
+        </div>       
+      </div>
+      <!-- ********************** Pie de pagina **********************-->
+      <footer>
+        <div>
+
+        </div>
+      </footer>
+
+
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
@@ -237,6 +260,7 @@
           { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
           { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
           { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
+
         ]; track item.title) {
           <a
             class="pill"
@@ -258,6 +282,12 @@
             </svg>
           </a>
         }
+        <a routerLink="suma" >SUMA</a>
+        <a routerLink="resta" >Calculadora</a>
+        <a routerLink="acercade" >Acerca de....</a>
+        <a routerLink="post" >Post....</a>
+        <a routerLink="mensajes">Mensajes</a>
+        <a routerLink="supermercado">Supermercado</a>
       </div>
       <div class="social-links">
         <a
@@ -333,4 +363,4 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-<router-outlet />
+

@@ -1,0 +1,34 @@
+<body (keydown)="handleKeyDown($event)">
+
+
+    <main>
+        <section id="calculadora">
+            <div class="pantalla">
+                <input type="text" id="resultado" readonly [value]="displayValue">
+
+            </div>
+        <div class="botones">
+            <button (click)="limpiar()">C</button>
+            <button (click)="agregarNumero('7')">7</button>
+            <button (click)="agregarNumero('8')">8</button>
+            <button (click)="agregarNumero('9')">9</button>
+            <button (click)="agregarOperador('+')">+</button>
+            <button (click)="agregarNumero('4')">4</button>
+            <button (click)="agregarNumero('5')">5</button>
+            <button (click)="agregarNumero('6')">6</button>
+            <button (click)="agregarOperador('-')">-</button>
+            <button (click)="agregarNumero('1')">1</button>
+            <button (click)="agregarNumero('2')">2</button>
+            <button (click)="agregarNumero('3')">3</button>
+            <button (click)="agregarOperador('*')">*</button>
+            <button (click)="agregarNumero('0')">0</button>
+            <button (click)="agregarDecimal()">.</button>
+            <button (click)="calcular()">=</button>
+            <button (click)="agregarOperador('/')">/</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+<h1>Calculadora!</h1>
+

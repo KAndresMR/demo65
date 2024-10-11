@@ -1,0 +1,14 @@
+<p>post works!</p>
+<h2>Posts</h2>
+<ul>
+    <li *ngFor="let post of posts">
+        <strong (click)="mostrarDetalles(post)">{{ post.title }}</strong>
+        <div *ngIf="post.mostrarDetalles">
+            <p><strong>User ID:</strong> {{ post.userId }}</p>
+            <p><strong>ID:</strong> {{ post.id }}</p>
+            <p><strong>Body:</strong> {{ post.body }}</p>
+        </div>
+    </li>
+
+    
+</ul>
